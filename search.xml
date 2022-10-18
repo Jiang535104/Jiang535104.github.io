@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>搭建博客中遇到的问题以及解决方案</title>
-      <link href="/2022/10/17/da-jian-bo-ke-zhong-yu-dao-de-wen-ti-yi-ji-jie-jue-fang-an/"/>
-      <url>/2022/10/17/da-jian-bo-ke-zhong-yu-dao-de-wen-ti-yi-ji-jie-jue-fang-an/</url>
+      <title>搭建博客中遇到的问题</title>
+      <link href="/2022/09/17/da-jian-bo-ke-zhong-yu-dao-de-wen-ti/"/>
+      <url>/2022/09/17/da-jian-bo-ke-zhong-yu-dao-de-wen-ti/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="搭建博客中遇到的问题"><a href="#搭建博客中遇到的问题" class="headerlink" title="搭建博客中遇到的问题"></a>搭建博客中遇到的问题</h1><h2 id="1-执行-hexo-s-命令时出现如下报错"><a href="#1-执行-hexo-s-命令时出现如下报错" class="headerlink" title="1.执行 hexo s 命令时出现如下报错"></a>1.执行 hexo s 命令时出现如下报错</h2><p><img src="/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/mmexport1663120418600.jpg" alt="mmexport1663120418600"></p><p><strong>原因：</strong>nodejs版本过低</p><p><strong>解决方法：</strong>更换新版本</p><h2 id="2-node-js安装后执行npm报错"><a href="#2-node-js安装后执行npm报错" class="headerlink" title="2.node.js安装后执行npm报错"></a>2.node.js安装后执行npm报错</h2><blockquote><p>npm WARN config global <code>–global</code>, <code>–local</code> are deprecated. Use <code>–location=global</code> instead.</p></blockquote><p><strong>解决方案：</strong></p><p>打开nodejs文件夹</p><p>找到npm.cmd 将 prefix-g 改为 prefix –location=global</p><h2 id="3-输入-hexo-d-后-报错"><a href="#3-输入-hexo-d-后-报错" class="headerlink" title="3.输入 hexo d 后 报错"></a>3.输入 hexo d 后 报错</h2><p>出现 ： </p><blockquote><p>*** Please tell me who you are.</p><p>Run</p><p>git config –global user.email “<a href="mailto:you@example.com">you@example.com</a>“<br>git config –global user.name “Your Name”</p><p>to set your account’s default identity.<br>Omit –global to set the identity only in this repository.</p><p>fatal: unable to auto-detect email address (got ‘xx@xxxxxx.(none)’)<br>FATAL {<br>err: Error: Spawn failed<br>at ChildProcess.<anonymous> (E:\ServerTool\Blog\node_modules\hexo-util\lib<br>\spawn.js:51:21)<br>at ChildProcess.emit (node:events:527:28)<br>at ChildProcess.cp.emit (E:\ServerTool\Blog\node_modules\cross-spawn\lib\e<br>noent.js:34:29)<br>at Process.ChildProcess._handle.onexit (node:internal/child_process:291:12<br>) {<br>code: 128<br>}<br>} Something’s wrong. Maybe you can find the solution here: %s <a href="https://hexo.io/do">https://hexo.io/do</a><br>cs/troubleshooting.html</anonymous></p></blockquote><p><strong>解决方法：</strong></p><p>首先第一步进入你的/Blog文件夹找到并删除.deploy_git文件夹;<br>然后在Git bash里依次输入:</p><blockquote><p>git config –global core.autocrlf false<br>hexo clean<br>hexo g<br>hexo d</p></blockquote><p>如果还不行的话，可能是账户认证出现了问题，需要你输入：</p><blockquote><p>git config –global user.email “邮箱”<br>git config –global user.name “用户名”</p></blockquote>]]></content>
       
       
       
